@@ -27,4 +27,47 @@ Criar uma presença digital profissional para a empresa, permitindo:
 ---
 
 ## 📂 Estrutura do Projeto
+projeto-site/
+├── img/
+├── index.html
+├── servicos.html
+├── portfolio.html
+├── contato.html
+├── style.css
+├── script.js
+└── README.md
+
+---
+
+## 🚀 Funcionalidades
+
+- ✅ Página inicial informativa  
+- ✅ Página de serviços  
+- ✅ Página de portfólio com integração ao Instagram  
+- ✅ Formulário de contato com validações em JavaScript  
+- ✅ Layout responsivo  
+- ✅ Links para redes sociais  
+
+---
+
+## 🌐 Site Online
+
+(Insira aqui o link do GitHub Pages quando ativar)
+
+Exemplo:  
+https://seunome.github.io/site-rici-greg
+
+---
+
+## 👨‍💻 Desenvolvedor
+
+**Nome:** Walison Castor  
+**Curso:** Análise e Desenvolvimento de Sistemas  
+
+---
+
+## 📄 Projeto de Extensão
+
+Este projeto foi desenvolvido com fins **acadêmicos**, como parte das atividades de **Extensão Universitária**.
+
 
