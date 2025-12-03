@@ -52,16 +52,13 @@ projeto-site/
 
 ## 🌐 Site Online
 
-(Insira aqui o link do GitHub Pages quando ativar)
-
-Exemplo:  
-https://seunome.github.io/site-rici-greg
+https://wallekson.github.io/site-rici-greg/
 
 ---
 
 ## 👨‍💻 Desenvolvedor
 
-**Nome:** Walison Castor  
+**Nome:** Wallekson Castor da Silva
 **Curso:** Análise e Desenvolvimento de Sistemas  
 
 ---
