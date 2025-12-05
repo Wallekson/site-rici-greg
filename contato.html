@@ -1,123 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Contato - Rici e Greg</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>   
+  <meta charset="UTF-8">
+  <title>Contato - Rici e Greg</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">Rici & Greg</a>
-      
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-      
-          <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-              <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
-              <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfólio</a></li>
-              <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
-            </ul>
-          </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Rici & Greg</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfólio</a></li>
+          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <main>
+    <section class="animar">
+      <h2>Fale Conosco</h2>
+
+      <p><strong>WhatsApp:</strong> (17) 99113-3482</p>
+      <p><strong>Email:</strong> contato@riciegreg.com.br</p>
+      <p><strong>Endereço:</strong> Rua Benjamin Constant, 3364 - Vila Imperial - São José do Rio Preto - SP</p>
+
+      <br>
+
+      <form onsubmit="enviarWhats(event)" id="formContato">
+
+        <div class="mb-3">
+          <label>Nome</label>
+          <input type="text" id="nome" class="form-control" required>
         </div>
-      </nav>
-      
 
-    <main>
-        <section class="animar">
-            <h2>Fale Conosco</h2>
+        <div class="mb-3">
+          <label>Email</label>
+          <input type="email" id="email" class="form-control" required>
+        </div>
 
-            <p><strong>WhatsApp:</strong> (17) 99113-3482</p>
-            <p><strong>Email:</strong> contato@riciegreg.com.br</p>
-            <p><strong>Endereço:</strong> Rua Benjamin Constant, 3188 - Vila Imperial - São José do Rio Preto - SP</p>
+        <div class="mb-3">
+          <label>Telefone</label>
+          <input type="tel" id="telefone" class="form-control" required>
+        </div>
 
-            <br>
+        <div class="mb-3">
+          <label>Mensagem</label>
+          <textarea id="mensagem" class="form-control" required></textarea>
+        </div>
 
-            <form onsubmit="enviarWhats(event)" id="formContato">
+        <button type="submit" class="btn btn-success">
+          Enviar pelo WhatsApp
+        </button>
 
-              <div class="mb-3">
-                <label>Nome</label>
-                <input type="text" id="nome" class="form-control" required>
-              </div>
-            
-              <div class="mb-3">
-                <label>Email</label>
-                <input type="email" id="email" class="form-control" required>
-              </div>
-            
-              <div class="mb-3">
-                <label>Telefone</label>
-                <input type="tel" id="telefone" class="form-control" required>
-              </div>
-            
-              <div class="mb-3">
-                <label>Mensagem</label>
-                <textarea id="mensagem" class="form-control" required></textarea>
-              </div>
-            
-              <button type="submit" class="btn btn-success">
-                Enviar pelo WhatsApp
-              </button>
-            
-            </form>
-            
+      </form>
 
-        </section>
-    </main>
 
-    <footer>
-        <p>© 2025 - Rici e Greg</p>
-    </footer>
-    <a id="whatsapp" href="https://wa.me/5517991133482" target="_blank">
-        💬
-      </a>
-      
-      <script src="script.js"></script>
-      <script>
-        function enviarWhats(event) {
-          event.preventDefault();
-        
-          let nome = document.getElementById("nome").value.trim();
-          let email = document.getElementById("email").value.trim();
-          let telefone = document.getElementById("telefone").value.trim();
-          let mensagem = document.getElementById("mensagem").value.trim();
-        
-          
-          if (nome === "" || email === "" || telefone === "" || mensagem === "") {
-            alert("Preencha todos os campos!");
-            return;
-          }
-        
-          
-          if (/\d/.test(nome)) {
-            alert("O nome não pode conter números.");
-            return;
-          }
-        
-          let texto = 
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 - Rici e Greg</p>
+  </footer>
+  <a id="whatsapp" href="https://wa.me/5517991133482" target="_blank">
+    💬
+  </a>
+
+  <script src="script.js"></script>
+  <script>
+    function enviarWhats(event) {
+      event.preventDefault();
+
+      let nome = document.getElementById("nome").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let telefone = document.getElementById("telefone").value.trim();
+      let mensagem = document.getElementById("mensagem").value.trim();
+
+
+      if (nome === "" || email === "" || telefone === "" || mensagem === "") {
+        alert("Preencha todos os campos!");
+        return;
+      }
+
+
+      if (/\d/.test(nome)) {
+        alert("O nome não pode conter números.");
+        return;
+      }
+
+      let texto =
         `📩 *Novo Contato pelo Site*
         
         👤 Nome: ${nome}
         📧 Email: ${email}
         📱 Telefone: ${telefone}
         💬 Mensagem: ${mensagem}`;
-        
-          let numeroWhatsApp = "5517991133482"; 
-          
-        
-          let url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
-        
-          window.open(url, "_blank");
-        
-          document.getElementById("formContato").reset();
-        }
-        </script>
-        
+
+      let numeroWhatsApp = "5517991133482";
+
+
+      let url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
+
+      window.open(url, "_blank");
+
+      document.getElementById("formContato").reset();
+    }
+  </script>
+
 </body>
+
 </html>

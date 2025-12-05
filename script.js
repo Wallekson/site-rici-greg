@@ -5,19 +5,18 @@ function validarNome() {
     let erroVazio = document.getElementById("erroNomeVazio");
     let erroNumero = document.getElementById("erroNomeNumero");
 
-    // Se tiver número, mostra erro de número
+
     if (/[0-9]/.test(nome.value)) {
         nome.classList.add("erro");
         nome.classList.remove("correto");
         erroNumero.classList.remove("d-none");
         erroVazio.classList.add("d-none");
 
-        // remove os números automaticamente
+
         nome.value = nome.value.replace(/[0-9]/g, "");
         return;
     }
 
-    // Se estiver vazio
     if (nome.value.trim() === "") {
         nome.classList.add("erro");
         nome.classList.remove("correto");
@@ -26,7 +25,7 @@ function validarNome() {
         return;
     }
 
-    // Se for curto demais
+
     if (nome.value.trim().length < 3) {
         nome.classList.add("erro");
         nome.classList.remove("correto");
@@ -35,7 +34,7 @@ function validarNome() {
         return;
     }
 
-    // Nome válido
+
     nome.classList.remove("erro");
     nome.classList.add("correto");
     erroVazio.classList.add("d-none");
@@ -54,7 +53,7 @@ function enviarWhatsApp() {
 
     let valido = true;
 
-    // Validação do nome
+
     if (nome.value.trim() === "" || nome.value.trim().length < 3) {
         nome.classList.add("erro");
         nome.classList.remove("correto");
@@ -65,9 +64,9 @@ function enviarWhatsApp() {
         nome.classList.add("correto");
         erroNomeVazio.classList.add("d-none");
     }
-  
 
-    // Validação do instrumento
+
+
     if (instrumento.value.trim() === "") {
         instrumento.classList.add("erro");
         instrumento.classList.remove("correto");
@@ -79,7 +78,7 @@ function enviarWhatsApp() {
         erroInstrumento.classList.add("d-none");
     }
 
-    // Validação do problema
+
     if (problema.value.trim() === "") {
         problema.classList.add("erro");
         problema.classList.remove("correto");
@@ -91,14 +90,14 @@ function enviarWhatsApp() {
         erroProblema.classList.add("d-none");
     }
 
-    // Se tiver erro, não envia
+
     if (!valido) return;
 
-    // ENVIO PARA WHATSAPP
+
     let mensagem = `Olá, meu nome é ${nome.value}. 
 Tenho um ${instrumento.value} e preciso de ajuda com o seguinte problema: ${problema.value}`;
 
-    let numero = "5517991133482"; 
+    let numero = "5517991133482";
 
     let link = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
     window.open(link, "_blank");
@@ -130,7 +129,7 @@ function atualizarCarousel() {
     carousel.style.transform = `translateX(${-index * largura}px)`;
 }
 
-// Botões
+
 function avancar() {
     const total = document.querySelectorAll(".card-insta").length;
     if (index < total - 1) {
@@ -151,6 +150,6 @@ function voltar() {
     atualizarCarousel();
 }
 
-//  AUTOMÁTICO A CADA 4 SEGUNDOS
+
 setInterval(avancar, 4000);
 
